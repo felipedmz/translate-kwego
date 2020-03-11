@@ -1,24 +1,28 @@
-# Lumen PHP Framework
+# Features
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+- Tradução de números de uma linguagem imaginária para hindu-arábico
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+# Ambiente de desenvolvimento
 
-## Official Documentation
+- Ubuntu 19.10
+- PHP v7.2.24
+- Lumen Framework v6.3.4
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+# How-to
 
-## Contributing
+1. Instale as dependências do projeto
+```sh
+composer install
+```
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Suba a aplicação
+```sh
+sh sh/run.sh
+```
 
-## Security Vulnerabilities
+3. Execute os requests no script
+```sh
+sh sh/translate.sh
+```
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Execute os testes no _phpunit_ ou altere as chamadas do arquivo _"sh/translate.sh"_ and play for you own.**

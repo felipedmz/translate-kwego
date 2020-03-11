@@ -2,6 +2,7 @@
 
 use App\Domain\Translate;
 use App\Domain\Kwego;
+use App\Exceptions\TranslateIncompleteException;
 
 class TranslateModel
 {
@@ -14,10 +15,11 @@ class TranslateModel
         $words = explode(" ", $translate->getvalue());
         $sum = 0;
         foreach ($words as $w) {
+            if (!isset($correspondence[$w])) throw new TranslateIncompleteException("Palavras nao mapeadas para a linguagem.");
             $sum += $correspondence[$w];
         }
         $translate->setTranslatedValue($sum);
-        $translate->setTranslateDateTime();
+        $translate->setTranslateDateTime();       
         return $translate;
     }
 }

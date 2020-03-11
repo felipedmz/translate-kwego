@@ -10,6 +10,9 @@ class TranslateController extends Controller
         $this->validate($request, ['number' => 'required']);
         //
         $translated = TranslateBusiness::kwegoToHinduArabic($request->input('number'));
-        return response()->json($translated->toArray());
+        return response()->json([
+            "status" => 200,
+            "result" => $translated->toArray()
+        ]);
     }
 }

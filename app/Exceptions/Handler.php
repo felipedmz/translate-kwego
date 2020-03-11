@@ -45,6 +45,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return response()->json([$exception->getMessage()]);
+        return response()->json([
+            "status" => 400,
+            "error" => (object)[
+                "type"  => class_basename($exception),
+                "error" => $exception->getMessage()
+            ]
+        ]);
     }
 }
